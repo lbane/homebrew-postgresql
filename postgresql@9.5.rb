@@ -59,7 +59,7 @@ class PostgresqlAT95 < Formula
 
     extra_version = ""
     extra_version += "+git" if build.head?
-    extra_version += " (Homebrew petere/postgresql)"
+    extra_version += " (Homebrew lbane/postgresql)"
     args << "--with-extra-version=#{extra_version}"
 
     ENV["XML_CATALOG_FILES"] = "#{etc}/xml/catalog"
