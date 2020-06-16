@@ -3,7 +3,11 @@ Homebrew PostgreSQL things
 
 These formulae allow installing multiple versions of PostgreSQL in parallel.  This is similar to what you can do on certain Linux distributions, for example Debian.
 
-To install something, first `brew tap lbane/postgresql` and then `brew install <formula>`.  Since there might be name overlaps with core Homebrew formulae, you should use fully qualified formula names like `brew install lbane/postgresql/postgresql-common`.
+<<<<<<< HEAD
+To install something, first `brew tap lbane/postgresql` and then `brew install <formula>`.  Since there might be name overlaps with core Homebrew formulae, you should also do `brew tap-pin lbane/postgresql` or use fully qualified formula names like `brew install lbane/postgresql/postgresql-common`.
+=======
+To install something, first `brew tap petere/postgresql` and then `brew install <formula>`.  Since there might be name overlaps with core Homebrew formulae, you should use fully qualified formula names like `brew install petere/postgresql/postgresql-common`.
+>>>>>>> dc4ac7f641304f5eb80f871cc53eca356efbada1
 
 [![Build Status](https://travis-ci.org/petere/homebrew-postgresql.svg?branch=master)](https://travis-ci.org/petere/homebrew-postgresql)
 

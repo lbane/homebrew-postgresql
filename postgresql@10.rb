@@ -1,9 +1,9 @@
 class PostgresqlAT10 < Formula
   desc "Relational database management system"
   homepage "https://www.postgresql.org/"
-  version = "10.12"
+  version = "10.13"
   url "https://ftp.postgresql.org/pub/source/v#{version}/postgresql-#{version}.tar.bz2"
-  sha256 "388f7f888c4fbcbdf424ec2bce52535195b426010b720af7bea767e23e594ae7"
+  sha256 "4d701f450cd92ffb123cf6c296e9656abbc2ab7ea6507894ff1e2475ae0754e1"
 
   head do
     url "https://git.postgresql.org/git/postgresql.git", :branch => "REL_10_STABLE"
@@ -70,18 +70,19 @@ class PostgresqlAT10 < Formula
     system "make", "install-world"
   end
 
-  def caveats; <<~EOS
-    To use this PostgreSQL installation, do one or more of the following:
+  def caveats
+    <<~EOS
+      To use this PostgreSQL installation, do one or more of the following:
 
-    - Call all programs explicitly with #{opt_prefix}/bin/...
-    - Add #{opt_bin} to your PATH
-    - brew link -f #{name}
-    - Install the postgresql-common package
+      - Call all programs explicitly with #{opt_prefix}/bin/...
+      - Add #{opt_bin} to your PATH
+      - brew link -f #{name}
+      - Install the postgresql-common package
 
-    To access the man pages, do one or more of the following:
-    - Refer to them by their full path, like `man #{opt_share}/man/man1/psql.1`
-    - Add #{opt_share}/man to your MANPATH
-    - brew link -f #{name}
+      To access the man pages, do one or more of the following:
+      - Refer to them by their full path, like `man #{opt_share}/man/man1/psql.1`
+      - Add #{opt_share}/man to your MANPATH
+      - brew link -f #{name}
     EOS
   end
 
